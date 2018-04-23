@@ -1,0 +1,35 @@
+/*// 累计得变量
+				BigDecimal sumPrice = new BigDecimal("0");
+
+				Set<String> keySet = catMap.keySet();
+				Iterator<String> iters = keySet.iterator();
+				while (iters.hasNext()) {
+					String key = iters.next();
+					CatItem cartItem = catMap.get(key);
+					sumPrice = sumPrice.add(cartItem.getSubtotal());
+
+				}
+
+				this.totalSum = sumPrice;
+
+				return totalSum;*/
+		BigDecimal index = new BigDecimal("0");
+		Iterator<Map.Entry<String, CatItem>> iterator = catMap.entrySet().iterator();
+		while(iterator.hasNext()){
+			Entry<String, CatItem> entry = iterator.next();
+			index.add(entry.getValue().getSubtotal());
+		}
+		totalSum = index;
+/*//		遍历购物车中的商品
+//		获取商品名
+		Iterator<String> keySet =  this.getCatMap().keySet().iterator();
+//		对每类商品小计进行累加
+		while(keySet.hasNext()){
+//			获取当前商品名
+			String pname = keySet.next();
+//			获取该条商品的总信息
+			CatItem catItem = catMap.get(pname);
+//			totalSum.add(catMap.get(keySet.next()).getSubtotal());
+			totalSum.add(catItem.getSubtotal());
+		}*/
+		return totalSum;

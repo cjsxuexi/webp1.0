@@ -1,0 +1,18 @@
+<table>
+			<thead>个人信息列表</thead>
+			<tr>
+				<td>用户名</td>
+				<td><input name = "username" type="text"/></td>
+			</tr>
+			<tr>
+				<td>头像</td>
+				<td><input name = "photo" type="file"/></td>
+			</tr>	
+			<tr>
+				<td>用户信息</td>
+				<td><input name = "userMessage" type="file"/></td>
+			</tr>
+			<tr>
+				<td><input type="submit" value="提交"/></td>
+			</tr>				
+		</table>
